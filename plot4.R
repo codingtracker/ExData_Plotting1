@@ -40,6 +40,9 @@ dataset$Global_reactive_power <- as.numeric(as.character(dataset$Global_reactive
 ##
 ## Reset 
 ##
+## This change made the plot4 legend showing full strings
+##
+png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2), oma = c(0, 0, 0, 0))
 
 
@@ -70,7 +73,7 @@ with(dataset, plot(Global_reactive_power ~ Time, t="l", xlab="datetime", ylab = 
 ##
 ## Save as a png file
 ##
-dev.copy(png, "plot4.png", width=480, height=480)
+
 dev.off()
 
 

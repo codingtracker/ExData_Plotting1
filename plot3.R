@@ -35,6 +35,9 @@ dataset$Sub_metering_3 <- as.numeric(as.character(dataset$Sub_metering_3))
 ##
 ## Reset 
 ##
+## This change made the plot3 legend showing full strings
+##
+png("plot3.png", width=480, height=480)
 par(mfrow=c(1,1))
 
 
@@ -47,7 +50,6 @@ with(dataset, lines(Sub_metering_2 ~ Time, t="l", xlab="", ylab = "", col="red" 
 with(dataset, lines(Sub_metering_3 ~ Time, t="l", xlab="", ylab = "", col="blue" ))
 legend("topright", col = c("black", "red", "blue"), lty = c(1,1,1), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
-dev.copy(png, "plot3.png", width=480, height=480)
 dev.off()
 
 
